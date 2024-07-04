@@ -35,10 +35,7 @@ do
      then
           echo -e "$i already installed...$Y SKIPPING $N"
      else
-         echo "$i not installed...Need to install"
+         dnf install $i -y &>>$LOGFILE
+         VALIDATE $? "Installing of $i"
      fi
 done
-
-
-dnf install mysql-server -y &>>$LOGFILE
-VALIDATE $? "Installing MYSQL Server"
