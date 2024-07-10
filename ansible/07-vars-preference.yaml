@@ -14,3 +14,10 @@
       WISHES: "Morning from TASK variable"
     ansible.builtin.debug:
       msg: "Hello, Good {{WISHES}}"
+
+#1.arguments
+#2.Task level
+#3. variable-file
+#4. prompt
+#5. play level
+#6. inventory
