@@ -1,4 +1,5 @@
 #!/bin/bash
+# global variables
 
 PERSON1=Robert
 PERSON2=Raj
