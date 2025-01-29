@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-LOGS_FOLDER="/var/log/shellscript-logs" # created a folder shellscript-logs in cd /var/log in server by using mkdir shellscript-logs
+LOGS_FOLDER="/var/log/shell-script-logs" # created a folder shellscript-logs in cd /var/log in server by using mkdir shellscript-logs
 LOG_FILE=$(echo $0 | cut -d "." -f1 ) # f1 is fragment1 in log_file
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S) # date format for year-month-day-hour-minute-second
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
