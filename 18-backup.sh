@@ -22,12 +22,12 @@ USAGE(){
 
 mkdir -p /home/ec2-user/shell-script-logs
 
-if [ $# -lt 2 ] # lt is less than
+if [ $# -lt 2 ] # -lt is less than and 2 is both source and destination directory i.e. 2 arguments
 then
     USAGE
 fi
 
-if [ ! -d "$SOURCE_DIR" ]
+if [ ! -d "$SOURCE_DIR" ] # -d is directory
 then
     echo -e "$SOURCE_DIR Does not exist...Please check"
     exit 1
@@ -48,7 +48,7 @@ then
     echo "Files are: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
-    if [ -f "$ZIP_FILE" ]
+    if [ -f "$ZIP_FILE" ] # -f is file exists or not
     then
         echo -e "Successfully created zip file for files older than $DAYS"
         while read -r filepath # here filepath is the variable name, you can give any name
